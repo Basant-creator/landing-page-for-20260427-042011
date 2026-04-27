@@ -1,0 +1,34 @@
+// Create JavaScript with: Event listeners, Form handling, Smooth scrolling/animations, Mobile menu toggle, Any interactive features
+// Add event listener to button to toggle mobile menu
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    mobileMenuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+    });
+});
+
+// Add event listener to smooth scroll to sections
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollLinks = document.querySelectorAll('.scroll-link');
+
+    scrollLinks.forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            const sectionId = link.getAttribute('href');
+            const section = document.querySelector(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+});
+
+// Add event listener to form submission
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        // Handle form submission here
+    });
+});
